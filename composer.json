@@ -1,0 +1,26 @@
+{
+    "name": "tamble/bluedrone-client-php",
+    "description": "Bluedrone API client for PHP",
+    "homepage": "https://github.com/tamble/bluedrone-client-php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Farcas",
+            "email": "alex.farcas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "guzzle/http": "3.9.1",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tamble\\Bluedrone\\Api\\": "lib/"
+        }
+    }
+}
