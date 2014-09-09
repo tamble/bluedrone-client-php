@@ -381,10 +381,7 @@ class Client
      */
     protected function getBluedroneException(\Exception $e)
     {
-        if ($e instanceof RequestException) {
-            // if it's a connection error
-            $bluedroneException = new BluedroneException('Connection Error', 0, $e->getMessage());
-        } elseif ($e instanceof BadResponseException) {
+        if ($e instanceof BadResponseException) {
             // if it's a 4xx or 5xx error
             $statusCode = $e->getResponse()->getStatusCode();
             $body = $e->getResponse()->getBody(true);
@@ -401,6 +398,9 @@ class Client
                     "The server responded with code '$statusCode' but did not provide more details about the error."
                 );
             }
+        } elseif ($e instanceof RequestException) {
+            // if it's a connection error
+            $bluedroneException = new BluedroneException('Connection Error', 0, $e->getMessage());
         } else {
             $bluedroneException = new BluedroneException('Exception', 0, $e->getMessage());
         }
