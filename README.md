@@ -50,6 +50,17 @@ as it implements the Token\Storage\StorageInterface interface.
 
 The bundled examples directory display various ways of using these adapters.
 
+If you're using the Mysql adapter, you will require to create a table with the following structure
+(the engine can be MyISAM if you want):
+
+```sql
+CREATE TABLE IF NOT EXISTS `bluedrone_tokens` (
+  `id` int(10) unsigned NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `eol_timestamp` int(10) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+```
+
 Example
 -------
 
