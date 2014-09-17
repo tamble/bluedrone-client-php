@@ -45,7 +45,7 @@ class Token
      */
     public function isExpired()
     {
-        return $this->eolTimestmap >= time();
+        return $this->eolTimestmap <= time();
     }
 
     /**
