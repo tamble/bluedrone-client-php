@@ -13,7 +13,7 @@ use Tamble\Bluedrone\Api\Token\Token;
 
 class Client
 {
-    const VERSION = "0.1.2";
+    const VERSION = "0.1.3";
 
     public static $baseUrl = "https://api.bluedron.es";
 
@@ -427,8 +427,8 @@ class Client
             'uname' => $uname
         );
         $headers = array(
-            'X-BlueDrone-Client-User-Agent: ' . json_encode($userAgent),
-            'User-Agent: Bluedrone/v1 PhpClient/' . static::VERSION
+            'X-BlueDrone-Client-User-Agent' => json_encode($userAgent),
+            'User-Agent' => 'Bluedrone/v1 PhpClient/' . static::VERSION
         );
 
         return $headers;
