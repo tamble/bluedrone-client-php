@@ -13,7 +13,7 @@ use Tamble\Bluedrone\Api\Token\Token;
 
 class Client
 {
-    const VERSION = "0.1.3";
+    const VERSION = "0.1.4";
 
     public static $baseUrl = "https://api.bluedron.es";
 
@@ -327,6 +327,11 @@ class Client
             }
 
             $response = $request->send();
+
+            if ($response->getStatusCode() == 204) {
+                return true;
+            }
+
             $jsonData = $response->json();
         } catch (\Exception $e) {
             throw $this->getBluedroneException($e);
