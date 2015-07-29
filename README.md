@@ -1,6 +1,6 @@
 # BlueDrone API PHP Client Library
 
-Bluedrone is a fulfillment service. You can sign up for an account at https://bluedron.es
+Bluedrone is a fulfillment service. You can sign up for an account at https://bluedrone.com
 
 Requirements
 ------------
