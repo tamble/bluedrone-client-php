@@ -13,9 +13,9 @@ use Tamble\Bluedrone\Api\Token\Token;
 
 class Client
 {
-    const VERSION = "0.1.4";
+    const VERSION = "0.1.5";
 
-    public static $baseUrl = "https://api.bluedron.es";
+    public static $baseUrl = "https://api.bluedrone.com";
 
     protected $uriTemplates = array(
         'channels.get' => '/channels{?offset,limit}',
