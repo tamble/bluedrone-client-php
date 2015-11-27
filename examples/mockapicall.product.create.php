@@ -29,6 +29,7 @@ try {
             "height" => 1,
             "price" => 3.5,
             "currency_code" => "USD",
+            "is_unfulfillable" => false,
             "is_fragile" => true,
             "is_dangerous" => false,
             "is_perishable" => false
