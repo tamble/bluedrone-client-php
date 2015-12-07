@@ -13,7 +13,7 @@ use Tamble\Bluedrone\Api\Token\Token;
 
 class Client
 {
-    const VERSION = "0.1.5";
+    const VERSION = "0.1.6";
 
     public static $baseUrl = "https://api.bluedrone.com";
 
